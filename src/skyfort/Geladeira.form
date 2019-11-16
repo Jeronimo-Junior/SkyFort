@@ -99,18 +99,99 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
-                  <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
-                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="78" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
+                          <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="Brastemp" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="checkbox1" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="Panasonic" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace pref="159" max="32767" attributes="0"/>
+                                  <Component id="checkbox2" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="Electrolux" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="checkbox3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="Samsung" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="checkbox4" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="LG" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="checkbox5" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="Esmaltec" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="checkbox6" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="Consul" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="checkbox7" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                  </Group>
+                  <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="267" max="32767" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="Brastemp" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Component id="checkbox1" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="Panasonic" min="-2" max="-2" attributes="0"/>
+                      <Component id="checkbox2" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="Electrolux" min="-2" max="-2" attributes="0"/>
+                      <Component id="checkbox3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="Samsung" min="-2" max="-2" attributes="0"/>
+                      <Component id="checkbox4" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="LG" min="-2" max="-2" attributes="0"/>
+                      <Component id="checkbox5" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="Esmaltec" min="-2" max="-2" attributes="0"/>
+                      <Component id="checkbox6" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="Consul" min="-2" max="-2" attributes="0"/>
+                      <Component id="checkbox7" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="44" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -119,6 +200,76 @@
         <Component class="javax.swing.JLabel" name="jLabel1">
           <Properties>
             <Property name="text" type="java.lang.String" value="Escolha a marca de sua geladeira"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="Brastemp">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Brastemp"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="Panasonic">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Panasonic"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="Electrolux">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Electrolux"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="Samsung">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Samsung"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="LG">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="LG"/>
+          </Properties>
+        </Component>
+        <Component class="java.awt.Checkbox" name="checkbox1">
+          <Properties>
+            <Property name="label" type="java.lang.String" value="checkbox1"/>
+          </Properties>
+        </Component>
+        <Component class="java.awt.Checkbox" name="checkbox2">
+          <Properties>
+            <Property name="label" type="java.lang.String" value="checkbox2"/>
+          </Properties>
+        </Component>
+        <Component class="java.awt.Checkbox" name="checkbox3">
+          <Properties>
+            <Property name="label" type="java.lang.String" value="checkbox3"/>
+          </Properties>
+        </Component>
+        <Component class="java.awt.Checkbox" name="checkbox4">
+          <Properties>
+            <Property name="label" type="java.lang.String" value="checkbox4"/>
+          </Properties>
+        </Component>
+        <Component class="java.awt.Checkbox" name="checkbox5">
+          <Properties>
+            <Property name="label" type="java.lang.String" value="checkbox5"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="Esmaltec">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Esmaltec"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="Consul">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Consul"/>
+          </Properties>
+        </Component>
+        <Component class="java.awt.Checkbox" name="checkbox6">
+          <Properties>
+            <Property name="label" type="java.lang.String" value="checkbox6"/>
+          </Properties>
+        </Component>
+        <Component class="java.awt.Checkbox" name="checkbox7">
+          <Properties>
+            <Property name="label" type="java.lang.String" value="checkbox7"/>
           </Properties>
         </Component>
       </SubComponents>

@@ -122,19 +122,19 @@ public class Interface extends javax.swing.JFrame {
 
     private void Botao_Ar_CondicionadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao_Ar_CondicionadoActionPerformed
         // Método que vai abrir outra aba ao usuário clicar no botão "Arcondicionado"
-        Interface novaAbaAr_condicionado = new Interface();
+        Ar_Condicionado novaAbaAr_condicionado = new Ar_Condicionado();
         novaAbaAr_condicionado.setVisible(true);
     }//GEN-LAST:event_Botao_Ar_CondicionadoActionPerformed
 
     private void Botao_GeladeiraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao_GeladeiraActionPerformed
         // Método que vai abrir outra aba ao usuário clicar no botão "Geladeira"
-        Interface novaAbaGeladeira = new Interface();
+        Geladeira novaAbaGeladeira = new Geladeira();
         novaAbaGeladeira.setVisible(true);
     }//GEN-LAST:event_Botao_GeladeiraActionPerformed
 
     private void Botao_TelevisaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao_TelevisaoActionPerformed
         //  Método que vai abrir outra aba ao usuário clicar no botão "Televisão"
-        Interface novaAbaTelevisao = new Interface();
+        Televisao novaAbaTelevisao = new Televisao();
         novaAbaTelevisao.setVisible(true);
     }//GEN-LAST:event_Botao_TelevisaoActionPerformed
 

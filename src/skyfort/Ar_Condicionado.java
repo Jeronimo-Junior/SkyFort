@@ -27,7 +27,7 @@ public class Ar_Condicionado extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        checkbox1 = new java.awt.Checkbox();
+        buttonGroup1 = new javax.swing.ButtonGroup();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -43,8 +43,6 @@ public class Ar_Condicionado extends javax.swing.JFrame {
         jRadioButton5 = new javax.swing.JRadioButton();
         jRadioButton6 = new javax.swing.JRadioButton();
         jRadioButton7 = new javax.swing.JRadioButton();
-
-        checkbox1.setLabel("checkbox1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -63,6 +61,20 @@ public class Ar_Condicionado extends javax.swing.JFrame {
         jLabel7.setText("Fujitsu");
 
         jLabel8.setText("Midea");
+
+        buttonGroup1.add(jRadioButton1);
+
+        buttonGroup1.add(jRadioButton2);
+
+        buttonGroup1.add(jRadioButton3);
+
+        buttonGroup1.add(jRadioButton4);
+
+        buttonGroup1.add(jRadioButton5);
+
+        buttonGroup1.add(jRadioButton6);
+
+        buttonGroup1.add(jRadioButton7);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -181,7 +193,7 @@ public class Ar_Condicionado extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private java.awt.Checkbox checkbox1;
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

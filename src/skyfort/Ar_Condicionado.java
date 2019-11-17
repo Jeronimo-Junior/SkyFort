@@ -43,7 +43,7 @@ public class Ar_Condicionado extends javax.swing.JFrame {
         jRadioButton5 = new javax.swing.JRadioButton();
         jRadioButton6 = new javax.swing.JRadioButton();
         jRadioButton7 = new javax.swing.JRadioButton();
-        jButton1 = new javax.swing.JButton();
+        BotaoProximo = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -77,10 +77,10 @@ public class Ar_Condicionado extends javax.swing.JFrame {
 
         buttonGroup1.add(jRadioButton7);
 
-        jButton1.setText("Próximo");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        BotaoProximo.setText("Próximo");
+        BotaoProximo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                BotaoProximoActionPerformed(evt);
             }
         });
 
@@ -127,8 +127,8 @@ public class Ar_Condicionado extends javax.swing.JFrame {
                         .addComponent(jLabel1)
                         .addGap(38, 38, 38))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jButton1)
-                        .addGap(52, 52, 52))))
+                        .addComponent(BotaoProximo)
+                        .addContainerGap())))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -160,20 +160,20 @@ public class Ar_Condicionado extends javax.swing.JFrame {
                     .addComponent(Fujitsu)
                     .addComponent(jRadioButton6))
                 .addGap(8, 8, 8)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Midea)
-                    .addComponent(jRadioButton7))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jRadioButton7)
+                    .addComponent(Midea))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
-                .addComponent(jButton1)
+                .addComponent(BotaoProximo)
                 .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void BotaoProximoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoProximoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_BotaoProximoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -211,6 +211,7 @@ public class Ar_Condicionado extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BotaoProximo;
     private javax.swing.JLabel Consul;
     private javax.swing.JLabel Electrolux;
     private javax.swing.JLabel Fujitsu;
@@ -219,7 +220,6 @@ public class Ar_Condicionado extends javax.swing.JFrame {
     private javax.swing.JLabel Philco;
     private javax.swing.JLabel Samsung;
     private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;

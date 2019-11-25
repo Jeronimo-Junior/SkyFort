@@ -5,17 +5,80 @@
  */
 package skyfort;
 
+import javax.swing.BoxLayout;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author pedro
  */
-public class Geladeira extends javax.swing.JFrame {
+class ResultItem {
+
+    String modelo = "";
+    String consumo = "";
+}
+
+class ConfigList {
+
+    ArrayList<ResultItem> lista = new ArrayList();
+
+    ArrayList<ResultItem> getList() {
+        skyfort.BD db = new skyfort.BD();
+        db.conectar();
+        ResultSet result = null;
+        if (db.conectado()) {
+            try {
+                result = db.listarGeladeiras();
+                while (result.next()) {
+                    ResultItem item = new ResultItem();
+                    item.modelo = result.getString("modelo");
+                    item.consumo = result.getString("consumo");
+                    lista.add(item);
+                }
+                result.close();
+
+            } catch (Exception e) {
+                System.out.println("err" + e);
+            }
+        }
+        db.desconectar();
+        for (int i = 0; i < lista.size(); i++) {
+            System.out.println(lista.get(i).modelo);
+        }
+        return lista;
+    }
+}
+
+public class Geladeira extends JFrame {
 
     /**
      * Creates new form Geladeira
      */
-    public Geladeira() {
-        initComponents();
+    public Geladeira() throws SQLException {
+//        initComponents();
+        listItems();
+        setSize(500, 500);
+    }
+
+    private void listItems() throws SQLException {
+        ConfigList painel = new ConfigList();
+        this.setAlwaysOnTop(true);
+        this.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        ArrayList<ResultItem> result = painel.getList();
+        this.setLayout(new BoxLayout(this.getContentPane(), BoxLayout.PAGE_AXIS));
+
+        for (int i = 0; i < result.size(); i++) {
+            this.add(new JLabel("         Marca: " + result.get(i).modelo + "                        -                                 " + "Consumo: " + result.get(i).consumo));
+        }
+        this.setVisible(true);
+        this.pack();
     }
 
     /**
@@ -198,7 +261,11 @@ public class Geladeira extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Geladeira().setVisible(true);
+                try {
+                    new Geladeira().setVisible(true);
+                } catch (SQLException ex) {
+                    Logger.getLogger(Geladeira.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
         });
     }

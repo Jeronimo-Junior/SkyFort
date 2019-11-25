@@ -5,6 +5,11 @@
  */
 package skyfort;
 
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import skyfort.BD;
+
 /**
  *
  * @author pedro
@@ -124,8 +129,13 @@ public class Interface extends javax.swing.JFrame {
 
     private void Botao_GeladeiraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao_GeladeiraActionPerformed
         // Método que vai abrir outra aba ao usuário clicar no botão "Geladeira"
-        Geladeira novaAbaGeladeira = new Geladeira();
-        novaAbaGeladeira.setVisible(true);
+        Geladeira novaAbaGeladeira;
+        try {
+            novaAbaGeladeira = new Geladeira();
+            novaAbaGeladeira.setVisible(true);
+        } catch (SQLException ex) {
+            Logger.getLogger(Interface.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_Botao_GeladeiraActionPerformed
 
     private void Botao_TelevisaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao_TelevisaoActionPerformed

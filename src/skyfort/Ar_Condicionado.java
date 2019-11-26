@@ -5,17 +5,80 @@
  */
 package skyfort;
 
+import javax.swing.BoxLayout;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author pedro
  */
-public class Ar_Condicionado extends javax.swing.JFrame {
+class ResultRefrigerador {
+
+    String modelo = "";
+    String consumo = "";
+}
+
+class ConfigRefrigerador {
+
+    ArrayList<ResultRefrigerador> lista = new ArrayList();
+
+    ArrayList<ResultRefrigerador> getList() {
+        skyfort.BD db = new skyfort.BD();
+        db.conectar();
+        ResultSet result = null;
+        if (db.conectado()) {
+            try {
+                result = db.listarRefrigeradores();
+                while (result.next()) {
+                    ResultRefrigerador item = new ResultRefrigerador();
+                    item.modelo = result.getString("modelo");
+                    item.consumo = result.getString("consumo");
+                    lista.add(item);
+                }
+                result.close();
+
+            } catch (Exception e) {
+                System.out.println("err" + e);
+            }
+        }
+        db.desconectar();
+        for (int i = 0; i < lista.size(); i++) {
+            System.out.println(lista.get(i).modelo);
+        }
+        return lista;
+    }
+}
+
+public class Ar_Condicionado extends JFrame {
 
     /**
      * Creates new form Ar_Condicionado
      */
-    public Ar_Condicionado() {
-        initComponents();
+    public Ar_Condicionado() throws SQLException {
+        // initComponents();
+        listItems();
+        setSize(500, 500);
+    }
+
+    private void listItems() throws SQLException {
+        ConfigList painel = new ConfigList();
+        this.setAlwaysOnTop(true);
+        this.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        ArrayList<ResultItem> result = painel.getList();
+        this.setLayout(new BoxLayout(this.getContentPane(), BoxLayout.PAGE_AXIS));
+
+        for (int i = 0; i < result.size(); i++) {
+            this.add(new JLabel("         Marca: " + result.get(i).modelo + "                        -                                 " + "Consumo: " + result.get(i).consumo));
+        }
+        this.setVisible(true);
+        this.pack();
     }
 
     /**
@@ -205,7 +268,11 @@ public class Ar_Condicionado extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Ar_Condicionado().setVisible(true);
+                try {
+                    new Ar_Condicionado().setVisible(true);
+                } catch (SQLException ex) {
+                    Logger.getLogger(Ar_Condicionado.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
         });
     }

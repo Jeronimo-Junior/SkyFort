@@ -123,8 +123,13 @@ public class Interface extends javax.swing.JFrame {
 
     private void Botao_Ar_CondicionadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao_Ar_CondicionadoActionPerformed
         // Método que vai abrir outra aba ao usuário clicar no botão "Arcondicionado"
-        Ar_Condicionado novaAbaAr_condicionado = new Ar_Condicionado();
-        novaAbaAr_condicionado.setVisible(true);
+        Ar_Condicionado novaAbaAr_condicionado;
+        try {
+            novaAbaAr_condicionado = new Ar_Condicionado();
+              novaAbaAr_condicionado.setVisible(true);
+        } catch (SQLException ex) {
+            Logger.getLogger(Interface.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_Botao_Ar_CondicionadoActionPerformed
 
     private void Botao_GeladeiraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao_GeladeiraActionPerformed
@@ -140,8 +145,14 @@ public class Interface extends javax.swing.JFrame {
 
     private void Botao_TelevisaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao_TelevisaoActionPerformed
         //  Método que vai abrir outra aba ao usuário clicar no botão "Televisão"
-        Televisao novaAbaTelevisao = new Televisao();
-        novaAbaTelevisao.setVisible(true);
+        Televisao novaAbaTelevisao;
+        try {
+            novaAbaTelevisao = new Televisao();
+            novaAbaTelevisao.setVisible(true);
+        } catch (SQLException ex) {
+            Logger.getLogger(Interface.class.getName()).log(Level.SEVERE, null, ex);
+        }
+      
     }//GEN-LAST:event_Botao_TelevisaoActionPerformed
 
     /**

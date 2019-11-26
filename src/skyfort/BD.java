@@ -65,11 +65,12 @@ public class BD extends JPanel {
      * @param model uma tabela modelo do tipo DefaultTableModel para ser usada
      * em conjunto com o componente JTable
      */
-    public ResultSet listarRefrigeradores(){
-         try {
-            String query = "SELECT modelo,consumo FROM skyfort.televisores ORDER BY modelo";
+    public ResultSet listarRefrigeradores() {
+        try {
+            String query = "SELECT modelo,consumo FROM skyfort.refrigeradores ORDER BY modelo";
             this.statement = this.connection.createStatement();
             this.resultSet = this.statement.executeQuery(query);
+            
 
         } catch (SQLException e) {
             System.out.println("Erro: " + e.getMessage());
@@ -77,17 +78,19 @@ public class BD extends JPanel {
         }
         return this.resultSet;
     }
-    
-    public ResultSet listarTelevisores(){
-              try {
+
+    public ResultSet listarTelevisores() {
+        try {
             String query = "SELECT modelo,consumo FROM skyfort.televisores ORDER BY modelo";
             this.statement = this.connection.createStatement();
             this.resultSet = this.statement.executeQuery(query);
+            
 
         } catch (SQLException e) {
             System.out.println("Erro: " + e.getMessage());
             this.mensagem = "Erro: " + e.getMessage();
         }
+        
         return this.resultSet;
     }
 
@@ -97,6 +100,7 @@ public class BD extends JPanel {
             String query = "SELECT modelo,consumo FROM skyfort.geladeiras ORDER BY modelo";
             this.statement = this.connection.createStatement();
             this.resultSet = this.statement.executeQuery(query);
+            
 
         } catch (SQLException e) {
             System.out.println("Erro: " + e.getMessage());

@@ -49,7 +49,7 @@ class ConfigRefrigerador {
         }
         db.desconectar();
         for (int i = 0; i < lista.size(); i++) {
-            System.out.println(lista.get(i).modelo);
+            System.out.println("Ar");
         }
         return lista;
     }
